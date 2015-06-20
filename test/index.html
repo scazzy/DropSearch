@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>DropSearch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"/>
+    <link rel="stylesheet" href="../src/dropsearch.css"/>
+    <style>
+        body {
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px dotted #333;
+        }
+        a:hover {
+            background: #333;
+            color: #fff;
+        }
+        .container {
+            padding: 30px 0 ;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 11px;
+        }
+        .dropsearch {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>DropSearch</h1>
+<h3>Lightweight Custom Dropdown, with Quick Search</h3>
+
+<div class="container">
+<p><strong>DropSearch example:</strong></p>
+<select name="beverage" class="dropsearch" data-placeholder="Select beverage">
+  <option value="">Select</option>
+  <option>Milk</option>
+  <option>Coffee</option>
+  <option>Tea</option>
+</select>
+
+<select id="month" name="month" class="dropsearch" data-placeholder="Select month">
+    <option value="">Month</option>
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+</select>
+
+<br/><br/>
+<p><strong>With Default Selected:</strong></p>
+<select name="beverage" class="dropsearch" data-placeholder="Select beverage">
+  <option value="">Select</option>
+  <option>Milk</option>
+  <option selected>Coffee</option>
+  <option>Tea</option>
+</select>
+</div>
+
+<hr/>
+
+<p>DropSearch is a lightweight &lt;select&gt; dropdown customizer, that translates your 
+existing dropdown into a pure HTML/CSS based dropdown. DropSearch by default allows QuickSearch
+to quickly search from your dropdown context.</p>
+
+
+<p>DropSearch works out of box and keeps your &lt;select&gt; intact so your data 
+is reflected in your form.
+</p>
+<p>DropSearch uses jQuery for DOM manipulation, and Fuse for search algorithm. Fuse helps search incorrect keywords
+and suggest relevant results.</p>
+
+
+<footer class="footer">
+Elton Jain | 
+<a href="http://github.com/scazzy">GitHub</a> | 
+<a href="http://twitter.com/eltonjain">Twitter</a> | 
+Open source licence MIT
+</footer>
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fuse.js/1.2.2/fuse.min.js"></script>
+<script src="../src/dropsearch.js"></script>
+<script>
+    $(document).ready(function () {
+        new DropSearch({
+            $select: $('.dropsearch')
+        });
+    });
+</script>
+</html>
