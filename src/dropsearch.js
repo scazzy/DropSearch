@@ -1,7 +1,8 @@
-/*
+/*!
  * DropSearch
- * - 
- * @eltonjain
+ * https://github.com/scazzy/DropSearch/
+ * 
+ * Twitter: @eltonjain
  */
 (function () {
     "use strict";
